@@ -1,4 +1,4 @@
-package com.acciojob.Hospital.Management.System;
+package com.acciojob.Hospital.Management.System.Models;
 
 public class User {
 

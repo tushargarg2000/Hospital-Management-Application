@@ -1,15 +1,17 @@
-package com.acciojob.Hospital.Management.System;
+package com.acciojob.Hospital.Management.System.Repository;
 
 
+import com.acciojob.Hospital.Management.System.Models.Doctor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-import javax.print.Doc;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Repository
-public class RepositoryLayer {
+public class DoctorRepository {
 
     Map<Integer,Doctor> doctorMap = new HashMap<>();
 
@@ -20,6 +22,7 @@ public class RepositoryLayer {
     }
 
     public List<Doctor> getAllDoctors(){
+        log.info("We are in repo Layer returning all the doctors ");
         return doctorMap.values().stream().toList();
     }
 
